@@ -37,7 +37,7 @@ mkdir results
 
 * Clone this repository:
 ```
-git clone https://github.com/gustavoakira-sw/ipoffice-xml-reader.git
+git clone https://github.com/gustavoakira-sw/ipoffice-users-xml.git
 ```
 
 * Install requirements:
