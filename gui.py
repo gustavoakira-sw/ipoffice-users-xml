@@ -55,21 +55,20 @@ def enableTextSearch():
     text_1.pack(pady=12, padx=10)
     text_1.insert("0.0", "")
     txtbox = text_1.get("1.0", 'end-1c')
-    global txt_string
     txt_string = str(txtbox).replace("[", "").replace("]", "").replace("'", "").replace(".,", ".").replace('",', '"')
     return txt_string
 
 def submit():
-    checkIfText = text_1.get("1.0", 'end-1c')
-    checkIfBox = combobox_1.get()
-    print(f'checkIfText: {checkIfText} | checkIfBox: {checkIfBox}')
+    textbox_tag = text_1.get("1.0", 'end-1c')
+    combobox_tag = combobox_1.get()
+    print(f'textbox_tag: {textbox_tag} | combobox_tag: {combobox_tag}')
     argument = str(open_file_dialog_event())
     if argument == "()":
         print('Invalid file 1: ', argument)
     elif argument  == "":
         print('Invalid file 2: ', argument)
     else:
-        if checkIfText == "":
+        if textbox_tag == "":
             print('Combobox!')
             browser_closed.forget()
             print(f'Scanning {argument}')
@@ -82,7 +81,7 @@ def submit():
             print('Textbox!')
             browser_closed.forget()
             print(f'Scanning {argument}')
-            txtbox = checkIfText
+            txtbox = textbox_tag
             my_string = str(txtbox).replace("[", "").replace("]", "").replace("'", "").replace(".,", ".").replace('",', '"')
             launch_bot_argument = str('python3 scripts/user_reader.py ' + argument + ' --tags ' + my_string)
             print('CLI argument: ' + launch_bot_argument)

@@ -1,0 +1,19 @@
+Started instance: 2023-03-13 12:45:45
+checkIfText:  | checkIfBox: Tags
+Combobox!
+Scanning /home/akira/Downloads/Python/XMLReader/users.xml
+CLI argument: python3 scripts/user_reader.py /home/akira/Downloads/Python/XMLReader/users.xml --tags Tags
+Stopped instance from: 2023-03-13 12:45:45
+checkIfText: LoginCode | checkIfBox: ForwardUnconditional
+Textbox!
+Scanning /home/akira/Downloads/Python/XMLReader/users.xml
+CLI argument: python3 scripts/user_reader.py /home/akira/Downloads/Python/XMLReader/users.xml --tags LoginCode
+Stopped instance from: 2023-03-13 12:45:45
+Closed instance from: 2023-03-13 12:45:45
+Started instance: 2023-03-13 12:46:32
+checkIfText: LoginCode | checkIfBox: Tags
+Textbox!
+Scanning /home/akira/Downloads/Python/XMLReader/users.xml
+CLI argument: python3 scripts/user_reader.py /home/akira/Downloads/Python/XMLReader/users.xml --tags LoginCode
+Stopped instance from: 2023-03-13 12:46:32
+Closed instance from: 2023-03-13 12:46:32

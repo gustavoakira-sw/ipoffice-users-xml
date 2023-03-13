@@ -12,7 +12,6 @@ class Logger(object):
         self.log.write(message)  
 
     def flush(self):
-        # for compatibility
         pass    
 
 sys.stdout = Logger()
