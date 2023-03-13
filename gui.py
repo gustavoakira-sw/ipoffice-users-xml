@@ -47,7 +47,7 @@ def open_file_dialog_event():
 )
     return filename
 
-def enableTextSearch():
+def enable_text_search():
     combobox_1.forget()
     close_button.pack(pady=12, padx=10)
     text_1.pack(pady=12, padx=10)
@@ -134,7 +134,7 @@ combobox_1 = customtkinter.CTkComboBox(master=frame, values=["Tags", "BusyOnHeld
 combobox_1.pack(pady=12, padx=10)
 combobox_1.set("Tags")
 
-checkbox = customtkinter.CTkCheckBox(master=frame, text="Type your Tag (beta)", command=enableTextSearch)
+checkbox = customtkinter.CTkCheckBox(master=frame, text="Type your Tag (beta)", command=enable_text_search)
 checkbox.pack(pady=12, padx=10)
 
 text_1 = customtkinter.CTkTextbox(master=frame, width=400, height=30)
