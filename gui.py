@@ -35,8 +35,6 @@ def task():
     print('Async test')
     root.after(2000, task)
 
-ts = time.time()
-
 def open_file_dialog_event():
     filetypes = (
         ('XML files', '*.xml'),
