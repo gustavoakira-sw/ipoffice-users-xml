@@ -68,7 +68,7 @@ def submit():
     else:
         if textbox_tag == "":
             print('Combobox!')
-            browser_closed.forget()
+            process_closed.forget()
             print(f'Scanning {argument}')
             cmbbox = combobox_1.get()
             my_string = str(cmbbox).replace("[", "").replace("]", "").replace("'", "").replace(".,", ".").replace('",', '"')
@@ -77,7 +77,7 @@ def submit():
             os.system(launch_bot_argument)
         else:
             print('Textbox!')
-            browser_closed.forget()
+            process_closed.forget()
             print(f'Scanning {argument}')
             txtbox = textbox_tag
             my_string = str(txtbox).replace("[", "").replace("]", "").replace("'", "").replace(".,", ".").replace('",', '"')
@@ -101,7 +101,7 @@ def check_submit_thread():
         progressbar.stop()
         label_msg.forget()
         close_button.pack(pady=12, padx=10)
-        browser_closed.pack(pady=12, padx=10)
+        process_closed.pack(pady=12, padx=10)
         print(f"Stopped instance from: {date_stamp}")
 
 def close_window():
@@ -142,8 +142,8 @@ text_1 = customtkinter.CTkTextbox(master=frame, width=400, height=30)
 label_msg = customtkinter.CTkLabel(master=frame, text="Please download users.xml from IPO Web Manager", font=("Arial", 16))
 label_msg.pack(pady=12, padx=10)
 
-browser_closed = customtkinter.CTkLabel(master=frame, text="Idle", font=("Arial", 16))
-browser_open = customtkinter.CTkLabel(master=frame, text="Active.", font=("Arial", 16))
+process_closed = customtkinter.CTkLabel(master=frame, text="Idle", font=("Arial", 16))
+process_open = customtkinter.CTkLabel(master=frame, text="Active.", font=("Arial", 16))
 
 reset = customtkinter.CTkButton(master=frame, text="Refresh search", command=refresh)
 reset.pack(pady=12, padx=10)
