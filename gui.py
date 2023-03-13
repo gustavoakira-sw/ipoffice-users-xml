@@ -104,7 +104,7 @@ def check_submit_thread():
         browser_closed.pack(pady=12, padx=10)
         print(f"Stopped instance from: {date_stamp}")
 
-def dropBot():
+def close_window():
     print(f"Closed instance from: {date_stamp}")
     root.quit()
     sys.exit()
@@ -128,7 +128,7 @@ label.pack(pady=12, padx=10)
 button = customtkinter.CTkButton(master=frame, text="Pick a file", command=lambda:start_submit_thread(None))
 button.pack(pady=12, padx=10)
 
-close_button = customtkinter.CTkButton(master=frame, text="Close", command=dropBot)
+close_button = customtkinter.CTkButton(master=frame, text="Close", command=close_window)
 
 combobox_1 = customtkinter.CTkComboBox(master=frame, values=["Tags", "BusyOnHeld", "CoverageTime", "CanControlACW", "DoNotDisturb", "ForwardHuntGroupCalls", "ForwardOnBusy", "ForwardUnconditional", "InboundAutoRecord", "Last-Modified", "LoginCode", "ManualVRL", "NoAnswerTime", "OneXClient", "OutboundAutoRecord", "OutgoingCallBar", "Receptionist", "RemoteWorker", "SoftPhone", "SystemName", "VoicemailOn", "WorkingHoursUserRightsGroup"])
 combobox_1.pack(pady=12, padx=10)
